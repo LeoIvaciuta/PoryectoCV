@@ -3,148 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Recetas simples de comidas tipicas como Pan, Pollo al horno, Chipas">
+    <meta name="description" content="Contiene informacion personal sobre Leandro Ivaciuta">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="normalize.css">
 
-    <title>Recetas</title>
+    <title>Leandro Ivaciuta CV</title>
 
     <link rel="stylesheet" type="text/css" href="estilos.css">
 
 </head>
 <body>
-    <h1>Esta es una pagina de recetas </h1>
+    <h1 class="p-3 m-0">Mi Curriculum Vitae</h1>
+    <div class="container-fluid px-0 py-0">
+        <!-- la clase navbar es para decir a boostp que es un nav bar y navbar-expand-md es para decir que se  va a colapsar cuando pase de md -->
+        <nav class="navbar navbar-expand-md px-0 py-0">
+            <!--tipo fluid para que ocupe toda la pantalla-->
+            <div class="container-fluid px-0 py-0">
+                <!--boton del menu-->
+                <button class="ms-auto navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- elementos del menu colapsable -->
+                <div class="collapse navbar-collapse" id="menu"> 
+                    <ul class="navbar-nav ms-auto">
+                        <!--nav-item es la clase para los elementos de un ul en btp y me-auto es para alinear a la izq-->
+                        <!--nav-link es la clase para los links en nav-->
+                        <li class="nav-item ms-auto"><a class="nav-link active" href="#educacion">Educacion</a></li>
+                        <li class="nav-item ms-auto"><a class="nav-link active" href="#explab">Experiencia Laboral</a></li>
+                        <li class="nav-item ms-auto"><a class="nav-link active" href="#footer">Pie de pagina</a></li>
+                    </ul>
+                </div>
 
-    <div class="contenedor">
-            <div class="recetasimg">
-                <a href="#Pan">
-                <h3>Pan</h3>
-                <img src="Img/Pan.jpg" alt="Pan">
-                </a>
             </div>
-        
-            <div class="recetasimg">
-                <a href="#Chipas">
-                <h3>Chipas</h3>
-                <img src="Img/Chipas.jpg" alt="Chipas">
-                </a>
-            </div>
-        
-            <div class="recetasimg">
-                <a href="#PolloHorno">
-                <h3>Pollo al horno</h3>
-                <img src="Img/PolloHorno.jpg" alt="Polloalhorno">
-                </a>
-            </div>
-
-            <div class="recetasimg">
-                <a href="#PolloHorno">
-                <h3>Pollo al horno</h3>
-                <img src="Img/PolloHorno.jpg" alt="Polloalhorno">
-                </a>
-            </div>
-
-            <div class="recetasimg">
-                <a href="#PolloHorno">
-                <h3>Pollo al horno</h3>
-                <img src="Img/PolloHorno.jpg" alt="Polloalhorno">
-                </a>
-            </div>
-
-            <div class="recetasimg">
-                <a href="#PolloHorno">
-                <h3>Pollo al horno</h3>
-                <img src="Img/PolloHorno.jpg" alt="Polloalhorno">
-                </a>
-            </div>
-
-            <div class="recetasimg">
-                <a href="#PolloHorno">
-                <h3>Pollo al horno</h3>
-                <img src="Img/PolloHorno.jpg" alt="Polloalhorno">
-                </a>
-            </div>
-
-
+        </nav>
     </div>
-    <h2> Recetas y sus pasos</h2>
-    <div class="contenedorsec">
-        <section id="Pasos">
-            <section id="Pan">  
-                <h2>Pan</h2>  
-                <h3>Ingredientes necesarios</h3>
-                <ul>
-                    <li>    Harina de trigo 500g</li>
-                    <li>    Agua templada 325ml</li>
-                    <li>    Levadura fresca de panadería 15g</li>
-                    <li>    Sal 10g</li>
-                    <li>    Azúcar 10g</li>
-                    <li>    Aceite de oliva virgen extra 45ml</li>
-                </ul>
-                <h3>Preparacion</h3>
-                <ul>
-                    <li>Introducimos el agua templada en un recipiente amplio y hondo y añadimos la levadura fresca, desmenuzada, y el azúcar. Removemos hasta que el azúcar y la levadura se integren por completo.
+    <div class="container py-2">
+        <div class="row">
+            <div class="col-md-4 text-center mb-2"> 
+                <img class="yo" width="50%" height="50%" src="Img/yo.jpeg" alt="Leandro Ivaciuta">
+            </div>
+            <div class="col-md-7"> 
+                <h4>Hola soy Leandro Ivaciuta</h4>
+                <p>Residente de Apostoles, Misiones, Argentina. Mi pasión por la programación me ha llevado a unirme a un curso donde puedo expandir mis conocimientos y habilidades en este campo apasionante.<br>
 
-                        Añadimos la mitad de la harina y todo el aceite. Removemos bien, procurando aplastar los grumos que se formen, y dejamos reposar durante 20 minutos a temperatura ambiente, cubriendo el recipiente con un trapo limpio. La masa crecerá ligeramente y se llenará de burbujas.</li>
-                    <li>Transcurrido el tiempo de reposo incorporamos el resto de la harina, la sal y removemos hasta que no podamos más, porque se volverá muy espesa. Espolvoreamos la superficie de trabajo con harina y volcamos la masa sobre ella. Nos engrasamos las manos con aceite y amasamos durante un par de minutos.</li>
-                    <li>Formamos una bola con la masa y la colocamos sobre una bandeja de horno cubierta con papel vegetal untado con un poco de aceite. Hacemos dos cortes en la superficie con un cuchillo afilado y, si queremos dar un aire rústico al pan, lo espolvoreamos con harina.
-
-                        Embadurnamos con aceite el interior de un recipiente amplio y hondo apto para horno (hemos usado un bol de pyrex de 24 cm, pero se puede usar una cacerola o similar) y cubrimos con él la masa. Cocemos en el horno, precalentado a 200 ºC con calor arriba y abajo, durante 45 minutos. Destapamos y dejamos enfriar sobre una rejilla antes de consumir.</li>
-                </ul>
-            </section>
-
-            <section id="Chipas">
-                <h2>Chipas</h2> 
-                <h3>Ingredientes necesarios</h3>
-                <ul>
-                    <li>Harina de trigo 500g</li>
-                    <li>Agua templada 325ml</li>
-                    <li>Levadura fresca de panadería 15g</li>
-                    <li>Sal 10g</li>
-                    <li>Azúcar 10g</li>
-                    <li>Aceite de oliva virgen extra 45ml</li>
-                </ul>
-                <h3>Preparacion</h3>
-                <ul>
-                    <li>Introducimos el agua templada en un recipiente amplio y hondo y añadimos la levadura fresca, desmenuzada, y el azúcar. Removemos hasta que el azúcar y la levadura se integren por completo.
-
-                        Añadimos la mitad de la harina y todo el aceite. Removemos bien, procurando aplastar los grumos que se formen, y dejamos reposar durante 20 minutos a temperatura ambiente, cubriendo el recipiente con un trapo limpio. La masa crecerá ligeramente y se llenará de burbujas.</li>
-                    <li>Formamos una bola con la masa y la colocamos sobre una bandeja de horno cubierta con papel vegetal untado con un poco de aceite. Hacemos dos cortes en la superficie con un cuchillo afilado y, si queremos dar un aire rústico al pan, lo espolvoreamos con harina.
-
-                        Embadurnamos con aceite el interior de un recipiente amplio y hondo apto para horno (hemos usado un bol de pyrex de 24 cm, pero se puede usar una cacerola o similar) y cubrimos con él la masa. Cocemos en el horno, precalentado a 200 ºC con calor arriba y abajo, durante 45 minutos. Destapamos y dejamos enfriar sobre una rejilla antes de consumir.</li>
-                </ul>
-            </section>
-
-            <section id="PolloHorno">
-                <h2>Pollo al horno</h2>
-                <h3>Ingredientes necesarios</h3>
-                <ul>
-                    <li>Patas de pollo con piel 4u</li>
-                    <li>Cebolla 1u</li>
-                    <li>Diente de ajo 3u</li>
-                    <li>Mostaza 5ml</li>
-                    <li>Aceite de oliva extra virgen 30ml</li>
-                    <li>Miel 5ml</li>
-                    <li>Hiernas provenzales 10g</li>
-                    <li>Pimienta negra molida 1 pizca</li>
-                    <li>Sal a gusto</li>
-                    <li>Tomillo en rama 2u</li>
-                </ul>
-                <h3>Preparacion</h3>
-                <ul>
-                    <li>Precalentar el horno a 180ºC, en el caso de que se vaya a cocinar imnediatamente. Quemar los posibles restos de plumas y cortar el posible exceso de grasa de los cuartos traseros de pollo. Secar con papel de cocina y colocar en una fuente o cazuela apta para el horno.<li>Formamos una bola con la masa y la colocamos sobre una bandeja de horno cubierta con papel vegetal untado con un poco de aceite. Hacemos dos cortes en la superficie con un cuchillo afilado y, si queremos dar un aire rústico al pan, lo espolvoreamos con harina.
-
-                        Embadurnamos con aceite el interior de un recipiente amplio y hondo apto para horno (hemos usado un bol de pyrex de 24 cm, pero se puede usar una cacerola o similar) y cubrimos con él la masa. Cocemos en el horno, precalentado a 200 ºC con calor arriba y abajo, durante 45 minutos. Destapamos y dejamos enfriar sobre una rejilla antes de consumir.</li>
+                    Uno de los aspectos que más disfruto en mi trayectoria es la capacidad de trabajar en equipo y aprender de otros. Considero que la colaboración y el intercambio de ideas son fundamentales para lograr resultados excepcionales en cualquier proyecto.<br>
                     
+                    Estoy entusiasmado por seguir aprendiendo y aplicando mis habilidades en el mundo de la programación.</p>
+            </div>
+            <h2 class="ul-h2" id="educacion">Educacion</h2>
+            <div class="col-md-4"> 
+                <h4 class="h4ftr">Primaria</h4>
+                    <ul>
+                        <li>Colegio "Cristo Rey"</li>
+                    </ul>
+            </div>
+            <div class="col-md-4"> 
+                <h4 class="h4ftr">Secundaria</h4>
+                <ul>
+                    <li>Escuela “E.P.E.T N°5 Fray Luis Beltrán”	
+                        Del cual salí “Técnico en informática Profesional y Personal”
+                        "</li>
                 </ul>
-            </section>
-        </section>
+            </div>
+            <div class="col-md-4"> 
+                <h4 class="h4ftr">Nivel superior</h4>
+                    <ul>
+                        <li>Actualmente cursando el 3er año de la carrera “Licenciatura en sistemas de información” en la UNaM de Apóstoles.</li>
+                    </ul>
+            </div>
+            <h2 class="ul-h2" id="explab">Experiencia laboral</h2>
+            <div class="col-md-4"> 
+                <h4 class="h4ftr">Pasantías (en el área de informática)</h4>
+                    <ul>
+                        <li>100 horas en “E.P.E.T N°5 Fray Luis Beltrán” <br>
+                            100 horas en la “Municipalidad de Apóstoles”
+                            </li>
+                    </ul>
+            </div>
+        </div>
     </div>
 
-    <footer> 
-        <a href="https://www.lanacion.com.ar/recetas/" target="_blank">
-        <h3>Pagina La Nacion de recetas</h3>
-        </a>
-    </footer>
+    <footer>
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-ms-6  col-lg-6 text-center">
+                    <h5 class="md-4" id="footer">Como  contactarme</h5>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col"><img class="mx-auto img-fluid" src="Img/email.png" alt="Email"><p class="text-break">ivaciutaapalache@gmail.com </p> </div>
 
+                            <div class="col"><img class="mx-auto img-fluid" src="Img/whatsapp.png" alt="Whatsapp"> <p class="text-break">+543758548821</p> </div>
+
+                            <div class="col"><img class="mx-auto img-fluid" src="Img/casa.png" alt="Casa"> <p class="text-break">Luis Pateur 605 Barrio Santa Clara</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-ms-6 col-lg-6 text-center">
+                    <h5 class="">Mis redes sociales</h5>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col ms-auto"><img class="mx-auto img-fluid" src="Img/facebook.png" target="_blank" alt="Facebook"> <p class="text-break"><a href="https://www.facebook.com/leandroivaciuta/?locale=es_LA" target="_blank">Facebook</a></p> </div>
+
+                            <div class="col ms-auto"><img class="mx-auto img-fluid" src="Img/instagram.png" alt="Instagram"> <p class="text-break"><a href="https://www.instagram.com/leosakii/" target="_blank">Instagram</a></p> </div>
+
+                            <div class="col"> <p><img class="mx-auto img-fluid" src="Img/twitter.png" alt="Twitter"> <p class="text-break"><a href="https://twitter.com/Apalachezd" target="_blank">Twitter</a></p> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
 
