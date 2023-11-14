@@ -8,13 +8,14 @@
     <link rel="stylesheet" type="text/css" href="estilos.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <title>Leandro Ivaciuta CV</title>
 </head>
 <body>
     <header id="#">
-        <nav >
+        <button class="abrir-menu" id="abrir"><i class="bi bi-list"></i></button>
+        <nav class="nav" id="nav">
+            <button class="cerrar-menu" id="cerrar"><i class="bi bi-x-lg"></i></button>
             <ul class="nav-list">
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#SobreMi">Sobre Mí</a></li>
@@ -24,7 +25,7 @@
             </ul>
         </nav>
     </header>
-    <div class="div-inicio" style="background-color: aqua;">
+    <div class="div-inicio">
         <img class="gifs-inicio" src="Img/gifs.gif" alt="Gifs de portada">
         <div class="div-inicio-yo">
             <div class="cont-img-yo">
@@ -41,7 +42,9 @@
             <p>Mi principal habilidad es trabajar en equipo. Disfruto colaborando con otros para alcanzar metas comunes y creo que la sinergia entre diferentes talentos es clave para lograr resultados excepcionales. Además, soy una persona exigente conmigo mismo, siempre buscando superar mis propios límites y alcanzar la excelencia en lo que hago.
             </p>
         </div>
-            <button class="contCV"><i class="bi bi-cloud-download"></i><a href="cv-LeandroIvaciuta.pdf" download="cv-LeandroIvaciuta.pdf">Descargar CV</a></button>
+        <a href="cv-LeandroIvaciuta.pdf" download="cv-LeandroIvaciuta.pdf" class="ancla-btn">
+            <button class="contCV"><i class="bi bi-cloud-download"></i>Descargar CV</button>
+        </a>
     </article>
     <article class="articulo-habilidades" id="Habilidades">
         <h2>Mis Habilidades</h2>
@@ -50,71 +53,42 @@
                 <img src="Img/css-3.png" alt="Css 3">
                 <img src="Img/js.png" alt="Javascrip">
                 <img src="Img/mysql.png" alt="Mysql">
+                <img src="Img/github.png" alt="Github"> 
             </div>  
         </div>
     </article>
     <article class="articulo-portafolio" id="Portafolios">
-        <h2>Portafolios</h2>
+        <h2>Portfolios</h2>
         <div class="contenedor-portafolio">
-            <h3>Estos son algunos de mis proyectos</h3>
             <div class="grid-portafolio">
-
                 <div class="grid-box">
-                    <h4>Proyecto #1</h4>
-                    <img src="Img/yo.jpeg" alt="">
+                    <h4>Portfolios</h4>
+                    <img src="Img/portada-porft.png" alt="">
                     <div class="tecn-proyect">
+                        <p>Html</p>
                         <p>Css</p>
-                        <p>Boostrap</p>
                         <p>Js</p>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eum numquam repellat. Consequatur, doloribus! Error doloribus ratione voluptas impedit excepturi. Natus sint enim cupiditate dolorem autem sapiente! Eaque, incidunt quae.</p>
+                    <p>Es un sitio que cree para mostrar mis habilidades, tiene una colección de proyectos que he desarrollado, aplicando todas las tecnologias que tengo experiencia</p>
                     <a href="https://github.com/LeoIvaciuta/PoryectoCV" class="ancla" target="_blank">
                         <i class="bi bi-github"></i>
                     </a>
                 </div>
 
                 <div class="grid-box">
-                    <h4>Proyecto #1</h4>
-                    <img src="Img/yo.jpeg" alt="">
+                    <h4>JuamcitoRepara</h4>
+                    <img src="Img/juancitorepara.png" alt="">
                     <div class="tecn-proyect">
+                        <p>Html</p>
                         <p>Css</p>
                         <p>Boostrap</p>
                         <p>Js</p>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eum numquam repellat. Consequatur, doloribus! Error doloribus ratione voluptas impedit excepturi. Natus sint enim cupiditate dolorem autem sapiente! Eaque, incidunt quae.</p>
-                    <a href="https://github.com/LeoIvaciuta/PoryectoCV" class="ancla" target="_blank">
+                    <p>Es un sitio web lo desarrolle a modo de practica para un amigo que ofrece servicio tecnico, para usarlo como publicidad</p>
+                    <a href="https://github.com/LeoIvaciuta/JuancitoRepara" class="ancla" target="_blank">
                         <i class="bi bi-github"></i>
                     </a>
                 </div>
-
-                <div class="grid-box">
-                    <h4>Proyecto #1</h4>
-                    <img src="Img/yo.jpeg" alt="">
-                    <div class="tecn-proyect">
-                        <p>Css</p>
-                        <p>Boostrap</p>
-                        <p>Js</p>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eum numquam repellat. Consequatur, doloribus! Error doloribus ratione voluptas impedit excepturi. Natus sint enim cupiditate dolorem autem sapiente! Eaque, incidunt quae.</p>
-                    <a href="https://github.com/LeoIvaciuta/PoryectoCV" class="ancla" target="_blank">
-                        <i class="bi bi-github"></i>
-                    </a>
-                </div>
-
-                <div class="grid-box">
-                    <h4>Proyecto #1</h4>
-                    <img src="Img/yo.jpeg" alt="">
-                    <div class="tecn-proyect">
-                        <p>Css</p>
-                        <p>Boostrap</p>
-                        <p>Js</p>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eum numquam repellat. Consequatur, doloribus! Error doloribus ratione voluptas impedit excepturi. Natus sint enim cupiditate dolorem autem sapiente! Eaque, incidunt quae.</p>
-                    <a href="https://github.com/LeoIvaciuta/PoryectoCV" class="ancla" target="_blank">
-                        <i class="bi bi-github"></i>
-                    </a>
-                </div>
-
             </div>    
         </div>
     </article>
@@ -136,11 +110,11 @@
             <div class="box">
                 <h2>MIS REDES SOCIALES</h2>
                 <div class="redsocial">
-                    <a href="#" target="_blank"><i class="bi bi-instagram"></i></a>
-                    <a href="#" target="_blank"><i class="bi bi-facebook"></i></a>
-                    <a href="#" target="_blank"><i class="bi bi-linkedin"></i></a>
-                    <a href="#" target="_blank"><i class="bi bi-whatsapp"></i></a>
-                    <a href="https://github.com/LeoIvaciuta">
+                    <a class="ig" href="https://www.instagram.com/leosakii/" target="_blank"><i class="bi bi-instagram"></i></a>
+                    <a class="fb" href="https://www.facebook.com/leandroivaciuta/?locale=es_LA" target="_blank"><i class="bi bi-facebook"></i></a>
+                    <a class="lk"  href="https://www.linkedin.com/in/leandro-j-ivaciuta-40617129b/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    <a class="wp"  href="https://wa.me/+543758548821" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                    <a class="gb" href="https://github.com/LeoIvaciuta" target="_blank">
                         <i class="bi bi-github"></i>
                     </a>
                 </div>

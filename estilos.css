@@ -9,8 +9,8 @@ a{
 
 body{
     font-family: 'Rajdhani';
-    background-color: #ffffff;
-    color: #013205;
+    background-color:  #f7f7f7;
+    color: #222222;
 }
 
 /* --green-50: #effeef;
@@ -30,10 +30,13 @@ header{
     height: 40px;
     display: flex;
     align-items: center;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     justify-content: right;
     position: fixed;
     z-index: 1;
+}
+.abrir-menu, .cerrar-menu{
+    display: none;
 }
 
 .nav-list{
@@ -46,6 +49,45 @@ header{
 .nav-list li a{
     text-decoration: none;
     color: rgb(211, 211, 211);
+    text-transform: uppercase;
+    position: relative;
+    padding: 3px;
+    transition: font-size 0.3s ease;
+}
+.nav-list li a:hover{
+    font-size: 20px;
+}
+.nav-list li a:after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #13d419;
+    /*De donde se quiere que empiece la animancion*/
+    transform-origin: left;
+    transform: scale(0);
+
+    transition: transform 0.5s ease-in-out;
+}
+.nav-list li a:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #13d419;
+    /*De donde se quiere que empiece la animancion*/
+    transform-origin: right;
+    transform: scale(0);
+
+    transition: transform 0.5s ease-in-out;
+    transition: font-size 0.3 ease;
+}
+.nav-list li a:hover:after,.nav-list li a:hover::before {
+    transform: scale(1)
 }
 
 .div-inicio{
@@ -66,8 +108,8 @@ header{
     padding-left: 30px;
 }
 .inicio-img-yo{
-    border-radius:50%; 
-    width: 200px; 
+    border-radius:50%;
+    width: 200px;
     height: 190px;
     object-fit: cover;
 }
@@ -99,11 +141,13 @@ header{
     margin-top: 40px;
     margin-left: 40px;
 }
-
+.ancla-btn{
+    display: inline-block;
+}
 .contCV{
     width: 200px;
     display: flex;
-    align-items: center; 
+    align-items: center;
     justify-content: center;
     background-color: #25e92B;
     color: rgb(3, 3, 3);
@@ -112,9 +156,15 @@ header{
     padding: 10px;
     border: none;
     border-radius: 10px;
-    
+    cursor: pointer;
+    gap: 1rem;
+    transition: transform 0.3s ease;
 }
-.contCV a {
+.contCV:hover{
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+a {
     text-decoration: none;
     color: #000000;
     margin-left: 10px;
@@ -157,17 +207,23 @@ header{
     padding: 20px;
     width: fit-content;
 }
-.grid-box{
-    padding: 12px;
-}
 .grid-box h4{
     text-align: center;
 }
 .grid-box p{
-    padding: 10px 5px 15px 5px; /* arriba derecha abajo izquierda */
+    padding: 10px 5px 30px 5px; /* arriba derecha abajo izquierda */
 }
 .ancla{
     float: right;
+    transition: transform 0.3s ease;
+    position: absolute;
+    bottom: 5px;
+    right: 15px;
+}
+.ancla:hover{
+    color: #2b2b2b;
+    transform: scale(1.3);
+
 }
 .tecn-proyect{
     display: flex;
@@ -176,7 +232,7 @@ header{
 }
 .tecn-proyect p{
     padding: 5px;
-    color: red;
+    color: #397a3b;
 }
 .bi{
     font-size: 1.5rem;
@@ -191,16 +247,43 @@ header{
 }
 .grid-portafolio{
     padding: 50px;
-    background-color: #effeef;
-    display: grid;
+
+    /*el grid es para cuanto tengas mas proyectos*/
+    /* display: grid;
     grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
-    gap: 3rem;
+    gap: 3rem; */
+    display: flex;
+    gap: 5rem;
 }
 .grid-box{
-    background-color: #7df880;
-    width: 200px;
+    background-color: #e4e4e4;
+    width: 250px;
+    min-width: 250px;
     height: auto;
+    min-height: 300px;
+    padding: 12px;
+    position: relative;
+    transition: transform 0.3s ease
 }
+.grid-box:hover{
+    transform: scale(1.03);
+}
+.grid-box:after {
+    content: '\2192'; /* Código de flecha hacia la derecha en Unicode */
+      position: absolute;
+      bottom: -11px;
+      right: 32px;
+      font-size: 28px;
+      font-weight: bold;
+      color: #050505;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      transform: translate(-50%, -50%)
+  }
+.grid-box:hover::after {
+    opacity: 1;
+}
+
 .grid-box a{
     text-decoration: none;
 }
@@ -209,6 +292,7 @@ header{
     width: 95%;
     height: 180px;
     padding: 5px;
+    object-fit: cover;
 }
 -------------------------------------------------------------
 /* FOOTER */
@@ -216,8 +300,9 @@ header{
     z-index: 1;
 }
 .piepg{
-    background-color: rgb(179, 179, 179);
+    background-color: #1D5A5A;
     width: 100%;
+    color: white;
 }
 .piepg .grupo1{
     width: 100%;
@@ -225,7 +310,7 @@ header{
     margin: auto; /*para que este centrado el grupo 1*/
     display: grid;
     grid-template-columns: repeat(2, 1fr); /*es para que haya 3 columnas y ocupen todo el ancho las 3 columnas */
-    grid-gap: 50px; /* es el margen entre cada columna*/ 
+    grid-gap: 50px; /* es el margen entre cada columna*/
     padding: 24px 0px; /*45 hacia arriba y 0 hacia los costados*/
 }
 
@@ -266,23 +351,28 @@ header{
 	width: 100%;
 	margin-bottom: 20px;
 }
+
 .contacto .lbtext {
 	border: none;
 	height: 40px;
-	background: #999495;
-	color: #fff;
+	background: #e4e3e3;
+	color: #2c2c2c;
 	font-size: 18px;
 	border-radius: 2%;
-	cursor: pointer;
+	cursor: text;
+    padding: 5px;
+    box-sizing: border-box
 }
 .contacto .lbsms{
     border: none;
 	height: 80px;
-	background: #999495;
-	color: #fff;
+	background: #e4e3e3;
+	color: #2c2c2c;
 	font-size: 18px;
 	border-radius: 2%;
-	cursor: pointer;
+    cursor: text;
+    padding: 5px;
+    box-sizing: border-box
 }
 
 .contacto button {
@@ -294,6 +384,11 @@ header{
 	font-size: 18px;
 	border-radius: 2%;
 	cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.contacto button:hover{
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .contacto .micorreo{
     position: absolute;
@@ -306,7 +401,7 @@ header{
 
 
 .box h2{
-    color: rgb(0, 4, 7);
+    color: #FFFFFF;
     font-size: 20px;
 }
 .box {
@@ -325,12 +420,41 @@ header{
     line-height: 45px;
     color: white;
     margin-right: 10px;
-    background-color: #0d2033;
     text-align: center;
-    transition: all 300ms ease;
+    transition: transform 0.3s ease;
 }
-.piepg .grupo1 .box .redsocial a:hover{
-    color: #684949;
+ .piepg .grupo1 .box .redsocial a:hover{
+    color: #2b2b2b;
+    transform: scale(1.3);
+} 
+ .piepg .grupo1 .box .redsocial a:hover{
+    color: #2b2b2b;
+    transform: scale(1.3);
+} 
+.piepg .grupo1 .box .redsocial .ig:hover{
+    color: #F7006E;
+    filter: drop-shadow(2px 0 1px  #F7006E);
+    transform: scale(1.3);
+}
+.piepg .grupo1 .box .redsocial .fb:hover{
+    color: #395CFF;
+    filter: drop-shadow(2px 0 1px  #395CFF);
+    transform: scale(1.3);
+}
+.piepg .grupo1 .box .redsocial .lk:hover{
+    color: #0866C2;
+    filter: drop-shadow(2px 0 1px  #0866C2);
+    transform: scale(1.3);
+}
+.piepg .grupo1 .box .redsocial .gb:hover{
+    color: #E6EDF3;
+    filter: drop-shadow(1px 0 0px  #E6EDF3);
+    transform: scale(1.3);
+}
+.piepg .grupo1 .box .redsocial .wp:hover{
+    color: #2FC440;
+    filter: drop-shadow(1px 0 1px  #2FC440);
+    transform: scale(1.3);
 }
 .piepg .grupo2{
     background-color: rgb(0, 0, 0);
@@ -345,13 +469,58 @@ header{
     width: 150px;
     height: 40px;
 }
+.grupo1{
+    background-color: (#852727;
+}
 /*-----------------------------------------------------*/
+
 /*Responsive FOOTER*/
-@media screen and (max-width:768px){
-    .piepg .grupo1{
-        width: 90%; /*90% para que quede un margen a cada lado y quede mejor*/
-        grid-template-columns: repeat(1, 1fr); /*es para que haya 1 columnas y ocupen todo el ancho*/
-        grid-gap: 30px; /* es el margen entre cada columna*/ 
-        padding: 24px 0px; /*45 hacia arriba y 0 hacia los costados*/
+@media screen and (max-width:550px) {
+    .abrir-menu, .cerrar-menu{
+        display:block; /* para que se vean */
+        /*estilos de los iconos del menu*/
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    .abrir-menu{
+        color: black;
+    }
+    .cerrar-menu{
+        color: white;
+    }
+    .nav{
+        /*para que este oculto, y solo se abra al toca el button*/
+        opacity: 0;
+        visibility: hidden;
+        z-index: 2;
+    }
+    .nav{
+        display: flex; /*para poder alinear el button, usando flex column y alinitem end*/
+        flex-direction: column;
+        align-items: end;
+        gap: 1em;
+        position: absolute;
+        top:0; /* para que esten en la parte superior*/
+        bottom: 0;
+        right: 0; /*para que esten a la derecha*/
+        padding: 1.5rem;
+        background-color: rgb(27, 26, 26);
+        box-shadow: 0 0 0 100vmax rgb(0, 0, 0, .5); /*para añadir el shadow al abrir el menu desplegable*/
+    }
+    .nav.visible{
+        /*esta clase con jvs hace que se añada al nav para mostrarlo*/
+        opacity: 1;
+        visibility: visible;
+    }
+    .nav-list{
+        flex-direction: column; /* para que con el display flex de navlist se pongan uno debajo del otro*/
+        align-items: end; /* hace que empiece el texto de la parte derecha*/
+    }
+    .nav-list li a{
+        color: aliceblue;
     }
 }
+
+/* responsive nav*/
