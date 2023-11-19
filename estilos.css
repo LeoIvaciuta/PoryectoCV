@@ -5,7 +5,9 @@
 a{
     text-decoration: none;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 
 body{
     font-family: 'Rajdhani';
@@ -27,14 +29,15 @@ body{
 
 header{
     width: 100%;
-    height: 40px;
+    height: 50px;
     display: flex;
     align-items: center;
-    background-color: rgb(0, 0, 0);
+    background-color: #020102;
     justify-content: right;
     position: fixed;
     z-index: 1;
 }
+
 .abrir-menu, .cerrar-menu{
     display: none;
 }
@@ -44,8 +47,9 @@ header{
     display: flex;
     gap: 1rem;
     color: aliceblue;
-    padding: 1rem;
+    padding: 2rem;
 }
+
 .nav-list li a{
     text-decoration: none;
     color: rgb(211, 211, 211);
@@ -54,89 +58,153 @@ header{
     padding: 3px;
     transition: font-size 0.3s ease;
 }
-.nav-list li a:hover{
-    font-size: 20px;
-}
-.nav-list li a:after{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #13d419;
-    /*De donde se quiere que empiece la animancion*/
-    transform-origin: left;
-    transform: scale(0);
 
-    transition: transform 0.5s ease-in-out;
-}
-.nav-list li a:before{
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #13d419;
-    /*De donde se quiere que empiece la animancion*/
-    transform-origin: right;
-    transform: scale(0);
-
-    transition: transform 0.5s ease-in-out;
-    transition: font-size 0.3 ease;
-}
-.nav-list li a:hover:after,.nav-list li a:hover::before {
-    transform: scale(1)
-}
-
+/* Estilos de la portada*/
 .div-inicio{
     height: 100vh;
     width: 100%;
-    position: relative;
-}
-.div-inicio-yo{
-    position: absolute;
-    top: 50%;
-    left: 20%;
     display: flex;
-    word-wrap: break-word;
-}
-.div-inicio-yo h2{
-    margin-top:60px;
-    color: white;
-    padding-left: 30px;
-}
-.inicio-img-yo{
-    border-radius:50%;
-    width: 200px;
-    height: 190px;
-    object-fit: cover;
+    align-items: center;
+    justify-content: center;
 }
 .gifs-inicio{
     width: 100%;
     height: 100%;
     position: absolute;
-    filter: brightness(0.4)
+    filter: brightness(0.1);
+    object-fit: cover;
 }
-
+.contenido-portada{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 100%;
+    height: 300px;
+    backdrop-filter: blur(8px);
+}
+.cont-span{
+    margin: 0 auto;
+    width: 840px;
+}
+.contenido-portada .span1, .contenido-portada .span2, .contenido-portada .span3{
+    margin-left: 3px;
+}
+.contenido-portada .span1{
+    display: inline-block;
+    margin: 3px;
+    font-size: 30px;
+    font-family: monospace;
+    white-space: nowrap;/*para que las palabras se separen por palabras en si y no por espacios*/
+}
+.contenido-portada .span2{
+    margin: 10px;
+    display: inline-block;
+    font-size: 33px;
+    font-family: monospace;
+    white-space: nowrap;/*para que las palabras se separen por palabras en si y no por espacios*/
+    border-right: 3px solid;
+    margin-right: 10px;
+    width: 3ch; /* debe ser el total de caracteres que tiene el span*/
+    opacity: 0;
+    visibility: hidden;
+    animation: 
+    typing2 0.3s steps(3) 1s,
+    barrita2 .5s infinite step-end alternate, 
+    fadeIn 1s forwards 1s;
+    overflow:hidden;
+}
+@keyframes typing2 {
+    from { width: 0;}
+    to { width: 3ch; border-color: transparent; }
+}
+@keyframes barrita2{
+    50% {border-color: transparent;} /*al 50% de la animacion, se vuelve invisible el borde rigt y da el efecto de la barrita de escritura*/
+    0%{border-color: transparent;}
+}
+@keyframes fadeIn {
+    to {
+      opacity: 1;
+      visibility: visible;
+    }
+}
+.contenido-portada .span3{
+    margin: 10px;
+    display: inline-block;
+    font-size: 33px;
+    font-weight: bold;
+    color: #13d419;
+    font-family: monospace;
+    white-space: nowrap;/*para que las palabras se separen por palabras en si y no por espacios*/
+    width: 16ch; /* debe ser el total de caracteres que tiene el span*/
+    opacity: 0;
+    visibility: hidden;
+    animation: 
+    typing3 1.95s steps(16) 1.3s, 
+    fadeIn3 1s forwards 1.3s;
+    overflow:hidden;
+}
+@keyframes typing3 {
+    from { width: 0;}
+}
+@keyframes fadeIn3 {
+    to {
+      opacity: 1;
+      visibility: visible;
+    }
+}
+.contenido-portada .span4{
+    margin: 10px;
+    display: inline-block;
+    font-size: 33px;
+    font-family: monospace;
+    white-space: nowrap;/*para que las palabras se separen por palabras en si y no por espacios*/
+    border-right: 3px solid;
+    margin-right: 10px;
+    width: 23ch; /* debe ser el total de caracteres que tiene el span*/
+    opacity: 0;
+    visibility: hidden;
+    animation: 
+    typing4 2s steps(23) 3.3s,
+    barrita4 .5s infinite step-end alternate, 
+    fadeIn4 1s forwards 3.3s;
+    overflow:hidden;
+}
+@keyframes typing4 {
+    from { width: 0;}
+}
+@keyframes barrita4{
+    50% {border-color: transparent;} /*al 50% de la animacion, se vuelve invisible el borde rigt y da el efecto de la barrita de escritura*/
+}
+@keyframes fadeIn4 {
+    to {
+      opacity: 1;
+      visibility: visible;
+    }
+}
+    
 /* ESPACIADO DE LAS CAJAS CONTENEDORAS PRINCIPALES DE LA PAGINA*/
-.articulo-sobremi, .articulo-habilidades, .articulo-portafolio{
-    margin: 100px;
+.articulo-habilidades, .articulo-portafolio{
+    margin: 140px 100px 140px 100px;
     padding: 50px;
+}
+.articulo-sobremi{
+    padding: 50px;
+    margin: 0 100px 0 100px;
+}
+.h2-sobremi{
+    margin-top: 140px;
+    margin-left: 150px;
+    padding: 20px;
+    background-color: rgb(222, 223, 223);
+    width: fit-content;
 }
 .resalt{
     color: #13d419;
     font-weight: bold;
 }
------------------------------------------------------
+/*-----------------------------------------------------*/
 /* ARTICULO SOBRE MI */
-.articulo-sobremi h2 {
-    padding: 20px;
-    background-color: rgb(222, 223, 223);
-    width: fit-content;
-}
-
 .contSobreMi p {
     margin-top: 40px;
     margin-left: 40px;
@@ -150,19 +218,40 @@ header{
     align-items: center;
     justify-content: center;
     background-color: #25e92B;
+    font-weight: bold;
     color: rgb(3, 3, 3);
     margin-left: 40px;
-    margin-top: 10px;
+    margin-top: 30px;
     padding: 10px;
     border: none;
+    
     border-radius: 10px;
     cursor: pointer;
     gap: 1rem;
     transition: transform 0.3s ease;
 }
-.contCV:hover{
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.articulo-sobremi{
+    display: flex;
+}
+.contSobreMi{
+    width: 800px;
+    margin-right: 20px;
+}
+.contSobreMi-img{
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    min-width: 300px;
+    min-height: 300px;
+    height: 300px;
+    margin: auto;
+    clip-path: polygon(29% 0%, 71% 0%, 100% 29%, 100% 71%, 71% 100%, 29% 100%, 0% 71%, 0% 29%);
+}
+.contSobreMi-img img{
+    width:105%;
+    height: 100%;
+    object-fit: cover;
+    
 }
 a {
     text-decoration: none;
@@ -173,8 +262,11 @@ a {
 .contSobreMi p{
     line-height: 1.5;
     margin-bottom: 20px;
+    word-wrap: break-word;
+    word-break: break-word; /* Rompe las palabras largas si no hay suficiente espacio */
+    overflow-wrap: break-word;
 }
--------------------------------------------------------------
+/*-------------------------------------------------------------*/
 /* HABILIDADESSS*/
 
 .articulo-habilidades h2 {
@@ -200,12 +292,13 @@ a {
     margin-top: 40px;
     margin-right: 20px;
 }
------------------------------------------------------------
+/*-----------------------------------------------------------*/
 /* Articulo porfatoflios*/
 
 .articulo-portafolio h2 {
     padding: 20px;
     width: fit-content;
+    background-color: rgb(222, 223, 223);
 }
 .grid-box h4{
     text-align: center;
@@ -220,11 +313,7 @@ a {
     bottom: 5px;
     right: 15px;
 }
-.ancla:hover{
-    color: #2b2b2b;
-    transform: scale(1.3);
 
-}
 .tecn-proyect{
     display: flex;
     align-items: center;
@@ -249,11 +338,12 @@ a {
     padding: 50px;
 
     /*el grid es para cuanto tengas mas proyectos*/
-    /* display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
-    gap: 3rem; */
-    display: flex;
-    gap: 5rem;
+     display: grid;
+     grid-template-columns: repeat(auto-fill, minmax(250px, 300px));
+    gap: 2rem; 
+    /* display: flex;
+    flex: 1;
+    gap: 5rem; */
 }
 .grid-box{
     background-color: #e4e4e4;
@@ -265,24 +355,7 @@ a {
     position: relative;
     transition: transform 0.3s ease
 }
-.grid-box:hover{
-    transform: scale(1.03);
-}
-.grid-box:after {
-    content: '\2192'; /* Código de flecha hacia la derecha en Unicode */
-      position: absolute;
-      bottom: -11px;
-      right: 32px;
-      font-size: 28px;
-      font-weight: bold;
-      color: #050505;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      transform: translate(-50%, -50%)
-  }
-.grid-box:hover::after {
-    opacity: 1;
-}
+
 
 .grid-box a{
     text-decoration: none;
@@ -294,13 +367,13 @@ a {
     padding: 5px;
     object-fit: cover;
 }
--------------------------------------------------------------
+/*-------------------------------------------------------------*/
 /* FOOTER */
 .piepg, .grupo1, .grupo2{
     z-index: 1;
 }
 .piepg{
-    background-color: #1D5A5A;
+    background-color: #091C0A;
     width: 100%;
     color: white;
 }
@@ -379,17 +452,15 @@ a {
 	border: none;
 	height: 40px;
     margin-top: 20px;
-	background: #a2091b;
-	color: #fff;
+	background: #25E92B;
+	color: #070707;
+    font-weight: bold;
 	font-size: 18px;
-	border-radius: 2%;
+	border-radius: 10px;
 	cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;
 }
-.contacto button:hover{
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
+
 .contacto .micorreo{
     position: absolute;
     bottom: 0;
@@ -423,40 +494,7 @@ a {
     text-align: center;
     transition: transform 0.3s ease;
 }
-/* .piepg .grupo1 .box .redsocial a:hover{
-    color: #2b2b2b;
-    transform: scale(1.3);
-} */
-/* .piepg .grupo1 .box .redsocial a:hover{
-    color: #2b2b2b;
-    transform: scale(1.3);
-} */
 
-.piepg .grupo1 .box .redsocial .ig:hover{
-    color: #F7006E;
-    filter: drop-shadow(2px 0 1px  #F7006E);
-    transform: scale(1.3);
-}
-.piepg .grupo1 .box .redsocial .fb:hover{
-    color: #395CFF;
-    filter: drop-shadow(2px 0 1px  #395CFF);
-    transform: scale(1.3);
-}
-.piepg .grupo1 .box .redsocial .lk:hover{
-    color: #0866C2;
-    filter: drop-shadow(2px 0 1px  #0866C2);
-    transform: scale(1.3);
-}
-.piepg .grupo1 .box .redsocial .gb:hover{
-    color: #E6EDF3;
-    filter: drop-shadow(1px 0 0px  #E6EDF3);
-    transform: scale(1.3);
-}
-.piepg .grupo1 .box .redsocial .wp:hover{
-    color: #2FC440;
-    filter: drop-shadow(1px 0 1px  #2FC440);
-    transform: scale(1.3);
-}
 .piepg .grupo2{
     background-color: rgb(0, 0, 0);
     padding: 15px 10px;
@@ -470,13 +508,120 @@ a {
     width: 150px;
     height: 40px;
 }
-.grupo1{
-    background-color: (#852727;
-}
 /*-----------------------------------------------------*/
+/* Hover solo si se detecta que el despositivo tiene cursor
+para evitar problemas de accesibilidad con los hover en mobile*/
+@media (hover: hover) {
+    .nav-list a{
+        position: relative;
+        transition: all .5s;
+    }
+    .nav-list a:hover{
+        background-color: #6FC268;
+        color: white;
+    }
+    /*crear el borde que se mueve hacia abajo*/
+    .nav-list a:before{
+        content: "";
+        position: absolute;
+        bottom: 12px;
+        left: 12px;
+        height: 12px;
+        width: 12px;
+        border: 3px solid #6FC268;
+        border-width:0 0 3px 3px;
+        opacity: 0;
+        transition: all 0.3s;
+    }
+    /*crear el borde que se mueve hacia arriba*/
+    .nav-list a:after{
+        content: "";
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        height: 12px;
+        width: 12px;
+        border: 3px solid #6FC268;
+        border-width: 3px 3px 0 0;
+        opacity: 0;
+        transition: all 0.3s;
+    }
+    /* hace que los bordes que creamos en before y after se muevan a donde queremos */
+    .nav-list a:hover:before{
+        opacity: 1;
+        bottom: -8px;
+        left: -8px;
+    }
+    .nav-list a:hover:after{
+        opacity: 1;
+        top: -8px;
+        right: -8px;
+    }
 
-/*Responsive FOOTER*/
-@media screen and (max-width:550px) {
+    /*--------------------------------------*/
+    .contCV:hover{
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .grid-box:hover{
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    .grid-box:after {
+        content: '\2192'; /* Código de flecha hacia la derecha en Unicode */
+          position: absolute;
+          bottom: -11px;
+          right: 32px;
+          font-size: 28px;
+          font-weight: bold;
+          color: #050505;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+          transform: translate(-50%, -50%)
+      }
+    .grid-box:hover::after {
+        opacity: 1;
+    }
+    .ancla:hover{
+        color: #2b2b2b;
+        transform: scale(1.3);
+    }
+
+    .contacto button:hover{
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .piepg .grupo1 .box .redsocial .ig:hover{
+        color: #F7006E;
+        filter: drop-shadow(2px 0 1px  #F7006E);
+        transform: scale(1.3);
+    }
+    .piepg .grupo1 .box .redsocial .fb:hover{
+        color: #395CFF;
+        filter: drop-shadow(2px 0 1px  #395CFF);
+        transform: scale(1.3);
+    }
+    .piepg .grupo1 .box .redsocial .lk:hover{
+        color: #0866C2;
+        filter: drop-shadow(2px 0 1px  #0866C2);
+        transform: scale(1.3);
+    }
+    .piepg .grupo1 .box .redsocial .gb:hover{
+        color: #E6EDF3;
+        filter: drop-shadow(1px 0 0px  #E6EDF3);
+        transform: scale(1.3);
+    }
+    .piepg .grupo1 .box .redsocial .wp:hover{
+        color: #2FC440;
+        filter: drop-shadow(1px 0 1px  #2FC440);
+        transform: scale(1.3);
+    }  
+    
+}/*finnn hover:hover*/
+
+/*Responsive NAV */
+@media screen and (max-width:750px) {
     .abrir-menu, .cerrar-menu{
         display:block; /* para que se vean */
         /*estilos de los iconos del menu*/
@@ -487,7 +632,12 @@ a {
     }
     .abrir-menu{
         color: rgb(255, 255, 255);
+        width: 50px;
     }
+    .bi-x-lg, .bi-list{
+        font-size: 40px
+    }
+
     .cerrar-menu{
         color: white;
     }
@@ -503,17 +653,18 @@ a {
         align-items: end;
         gap: 1em;
         position: absolute;
-        top:0; /* para que esten en la parte superior*/
+        top:1; /* para que esten en la parte superior*/
         bottom: 0;
         right: 0; /*para que esten a la derecha*/
         padding: 1.5rem;
-        background-color: rgb(27, 26, 26);
         box-shadow: 0 0 0 100vmax rgb(0, 0, 0, .5); /*para añadir el shadow al abrir el menu desplegable*/
     }
     .nav.visible{
         /*esta clase con jvs hace que se añada al nav para mostrarlo*/
         opacity: 1;
         visibility: visible;
+        background-color: #020102;
+        height:10px;
     }
     .nav-list{
         flex-direction: column; /* para que con el display flex de navlist se pongan uno debajo del otro*/
@@ -521,7 +672,82 @@ a {
     }
     .nav-list li a{
         color: aliceblue;
+    } 
+}
+
+/*respondive articulo sobre mi*/
+@media screen and (max-width:1240px){
+    .articulo-sobremi{
+        flex-direction: column-reverse;
+    }
+    .contSobreMi {
+        width: auto;
     }
 }
 
-/* responsive nav*/
+/* responsive FOOTER*/
+@media screen and (max-width:860px){
+    .piepg .grupo1{
+        grid-template-columns: repeat(1, 1fr); /*es para que haya 1 columnas y ocupen todo el ancho*/
+        grid-gap: 30px; /* es el margen entre cada columna*/ 
+        padding: 24px 0px; /*45 hacia arriba y 0 hacia los costados*/
+    }
+    
+    .contacto{
+        width: 500px;
+        margin: auto;
+        margin-top: 10px;
+    }
+
+    @media screen and (max-width: 530px){
+        .contacto{
+            width: 400px;
+        }
+    }
+}
+
+/* respondive portfolios*/
+@media screen and (max-width:1053px){
+    .grid-portafolio{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .grid-box{
+        width: 100%;
+        max-width: 600px;
+    }
+    .articulo-habilidades, .articulo-portafolio{
+        margin: 100px 50px 100px 40px;
+        padding: 50px;
+    }
+    .h2-sobremi{
+        margin-top: 130px;
+        margin-left: 91px;
+    }
+
+    
+}
+
+@media screen and (max-width:639px){
+    .articulo-sobremi, .articulo-habilidades, .articulo-portafolio{
+        margin: 60px 0 60px 0;
+        padding: 40px;
+    } 
+}
+
+@media screen and (max-width:440px){
+    .contacto{
+        width: 300px;
+        margin: auto;
+        margin-top: 10px;
+    }
+
+    .articulo-portafolio h2, .articulo-habilidades h2, .articulo-sobremi h2{
+        margin: 0 auto; /* centra los h2 con el width: fit content*/    
+    }
+    .articulo-sobremi, .articulo-habilidades, .articulo-portafolio{
+        margin: auto;
+        padding: 40px 10px 40px 10px;
+    }
+}

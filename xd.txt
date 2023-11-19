@@ -1,0 +1,35 @@
+/* .nav-list li a:hover{
+        font-size: 20px;
+    }
+    .nav-list li a:after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #13d419;
+        /*De donde se quiere que empiece la animancion
+        transform-origin: left;
+        transform: scale(0);
+    
+        transition: transform 0.5s ease-in-out;
+    }
+    .nav-list li a:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #13d419;
+        /*De donde se quiere que empiece la animancion
+        transform-origin: right;
+        transform: scale(0);
+    
+        transition: transform 0.5s ease-in-out;
+        transition: font-size 0.3 ease;
+    }
+    .nav-list li a:hover:after,.nav-list li a:hover::before {
+        transform: scale(1)
+    } */
