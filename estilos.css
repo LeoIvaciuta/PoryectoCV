@@ -13,6 +13,7 @@ body{
     font-family: 'Rajdhani';
     background-color:  #f7f7f7;
     color: #222222;
+    scroll-padding-top: 3.25rem;
 }
 
 /* --green-50: #effeef;
@@ -34,7 +35,6 @@ header{
     align-items: center;
     background-color: #020102;
     justify-content: right;
-    position: fixed;
     z-index: 1;
 }
 
@@ -48,6 +48,12 @@ header{
     gap: 1rem;
     color: aliceblue;
     padding: 2rem;
+}
+
+.div-nav-fixed{
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 }
 
 .nav-list li a{
@@ -680,6 +686,12 @@ para evitar problemas de accesibilidad con los hover en mobile*/
     .articulo-sobremi{
         flex-direction: column-reverse;
     }
+    .contSobreMi-img{
+        width: 260px;
+        min-width: 260px;
+        min-height: 260px;
+        height: 260px;
+    }
     .contSobreMi {
         width: auto;
     }
@@ -726,14 +738,35 @@ para evitar problemas de accesibilidad con los hover en mobile*/
         margin-left: 91px;
     }
 
-    
+    .contenido-portada .span1, .contenido-portada .span2, .contenido-portada .span3, .contenido-portada .span4{
+        font-size: 25px;
+        margin: 3px;
+       }
+    .cont-span{
+        margin-left: 100px;
+    }
 }
-
+@media screen and (max-width:745px){
+    .cont-span{
+        margin-left: 80px;
+    }
+}
+@media screen and (max-width:485px){
+    .cont-span{
+        margin-left: 50px;
+    }
+}
 @media screen and (max-width:639px){
     .articulo-sobremi, .articulo-habilidades, .articulo-portafolio{
         margin: 60px 0 60px 0;
         padding: 40px;
     } 
+    .contSobreMi-img{
+        width: 230px;
+        min-width: 230px;
+        min-height: 230px;
+        height: 230px;
+    }
 }
 
 @media screen and (max-width:440px){
@@ -743,11 +776,18 @@ para evitar problemas de accesibilidad con los hover en mobile*/
         margin-top: 10px;
     }
 
-    .articulo-portafolio h2, .articulo-habilidades h2, .articulo-sobremi h2{
-        margin: 0 auto; /* centra los h2 con el width: fit content*/    
+    .articulo-portafolio h2, .articulo-habilidades h2, .h2-sobremi{
+        margin-left: auto; /* centra los h2 con el width: fit content*/    
+        margin-right: auto;
     }
     .articulo-sobremi, .articulo-habilidades, .articulo-portafolio{
         margin: auto;
         padding: 40px 10px 40px 10px;
+    }
+    .contSobreMi-img{
+        width: 200px;
+        min-width: 200px;
+        min-height: 200px;
+        height: 200px;
     }
 }
